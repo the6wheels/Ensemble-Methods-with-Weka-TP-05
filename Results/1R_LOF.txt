@@ -1,0 +1,171 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     bridges-version1-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    107
+Attributes:   13
+              IDENTIF
+              RIVER
+              LOCATION
+              ERECTED
+              PURPOSE
+              LENGTH
+              LANES
+              CLEAR-G
+              T-OR-D
+              MATERIAL
+              SPAN
+              REL-L
+              TYPE
+Test mode:    107-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IDENTIF:
+	E1	-> WOOD
+	E10	-> WOOD
+	E100	-> WOOD
+	E101	-> CANTILEV
+	E102	-> CONT-T
+	E103	-> CANTILEV
+	E105	-> CONT-T
+	E107	-> WOOD
+	E107N	-> SIMPLE-T
+	E108	-> CONT-T
+	E109	-> WOOD
+	E11	-> WOOD
+	E12	-> WOOD
+	E13	-> WOOD
+	E14	-> WOOD
+	E15	-> WOOD
+	E16	-> SUSPEN
+	E17	-> SIMPLE-T
+	E18	-> SIMPLE-T
+	E19	-> WOOD
+	E2	-> WOOD
+	E20	-> WOOD
+	E21	-> SIMPLE-T
+	E22	-> WOOD
+	E23	-> SUSPEN
+	E24	-> SIMPLE-T
+	E25	-> SIMPLE-T
+	E26	-> SIMPLE-T
+	E27	-> SIMPLE-T
+	E28	-> ARCH
+	E29	-> SUSPEN
+	E3	-> WOOD
+	E30	-> SIMPLE-T
+	E31	-> SIMPLE-T
+	E32	-> SIMPLE-T
+	E33	-> SIMPLE-T
+	E34	-> SIMPLE-T
+	E35	-> SIMPLE-T
+	E36	-> SIMPLE-T
+	E37	-> SIMPLE-T
+	E38	-> SIMPLE-T
+	E39	-> SIMPLE-T
+	E4	-> WOOD
+	E40	-> SIMPLE-T
+	E41	-> SIMPLE-T
+	E42	-> SIMPLE-T
+	E43	-> ARCH
+	E44	-> SUSPEN
+	E45	-> SIMPLE-T
+	E46	-> SIMPLE-T
+	E47	-> SIMPLE-T
+	E48	-> SIMPLE-T
+	E49	-> CANTILEV
+	E5	-> WOOD
+	E50	-> SIMPLE-T
+	E51	-> SIMPLE-T
+	E52	-> CANTILEV
+	E53	-> SIMPLE-T
+	E54	-> SIMPLE-T
+	E55	-> SIMPLE-T
+	E56	-> SIMPLE-T
+	E57	-> CANTILEV
+	E58	-> SIMPLE-T
+	E59	-> CANTILEV
+	E6	-> WOOD
+	E60	-> SIMPLE-T
+	E61	-> SIMPLE-T
+	E62	-> CONT-T
+	E63	-> SIMPLE-T
+	E64	-> ARCH
+	E65	-> SUSPEN
+	E66	-> ARCH
+	E67	-> CANTILEV
+	E68	-> SIMPLE-T
+	E69	-> SUSPEN
+	E7	-> WOOD
+	E70	-> SUSPEN
+	E71	-> SUSPEN
+	E72	-> CANTILEV
+	E73	-> ARCH
+	E74	-> CANTILEV
+	E75	-> ARCH
+	E76	-> SUSPEN
+	E77	-> ARCH
+	E78	-> ARCH
+	E79	-> CANTILEV
+	E8	-> SUSPEN
+	E80	-> CANTILEV
+	E81	-> CONT-T
+	E82	-> SIMPLE-T
+	E83	-> ARCH
+	E84	-> ARCH
+	E85	-> CONT-T
+	E86	-> CONT-T
+	E87	-> SIMPLE-T
+	E88	-> CONT-T
+	E89	-> SIMPLE-T
+	E9	-> SUSPEN
+	E90	-> ARCH
+	E91	-> ARCH
+	E92	-> SIMPLE-T
+	E93	-> CONT-T
+	E94	-> SIMPLE-T
+	E95	-> SIMPLE-T
+	E96	-> SIMPLE-T
+	E97	-> ARCH
+	E98	-> CONT-T
+	E99	-> SIMPLE-T
+(105/105 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          16               15.2381 %
+Incorrectly Classified Instances        89               84.7619 %
+Kappa statistic                          0     
+Mean absolute error                      0.2825
+Root mean squared error                  0.5315
+Relative absolute error                110.659  %
+Root relative squared error            148.4891 %
+Total Number of Instances              105     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.152      1.000    0.264      ?        0.500     0.150     WOOD
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.103     SUSPEN
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.411     SIMPLE-T
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.121     ARCH
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.103     CANTILEV
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.093     CONT-T
+Weighted Avg.    0.152    0.152    ?          0.152    ?          ?        0.500     0.241     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 16  0  0  0  0  0 |  a = WOOD
+ 11  0  0  0  0  0 |  b = SUSPEN
+ 44  0  0  0  0  0 |  c = SIMPLE-T
+ 13  0  0  0  0  0 |  d = ARCH
+ 11  0  0  0  0  0 |  e = CANTILEV
+ 10  0  0  0  0  0 |  f = CONT-T
+

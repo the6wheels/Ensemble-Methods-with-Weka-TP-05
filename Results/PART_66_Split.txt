@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     bridges-version1-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    107
+Attributes:   13
+              IDENTIF
+              RIVER
+              LOCATION
+              ERECTED
+              PURPOSE
+              LENGTH
+              LANES
+              CLEAR-G
+              T-OR-D
+              MATERIAL
+              SPAN
+              REL-L
+              TYPE
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+MATERIAL = WOOD: WOOD (16.0)
+
+: SIMPLE-T (89.0/45.0)
+
+Number of Rules  : 	2
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          21               60      %
+Incorrectly Classified Instances        14               40      %
+Kappa statistic                          0.4406
+Mean absolute error                      0.1713
+Root mean squared error                  0.3052
+Relative absolute error                 66.2541 %
+Root relative squared error             83.3438 %
+Total Number of Instances               35     
+Ignored Class Unknown Instances                  1     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     WOOD
+                 0.000    0.000    ?          0.000    ?          ?        0.726     0.260     SUSPEN
+                 0.917    0.565    0.458      0.917    0.611      0.359    0.672     0.436     SIMPLE-T
+                 0.000    0.000    ?          0.000    ?          ?        0.710     0.217     ARCH
+                 0.000    0.000    ?          0.000    ?          ?        0.576     0.111     CANTILEV
+                 1.000    0.031    0.750      1.000    0.857      0.852    0.985     0.750     CONT-T
+Weighted Avg.    0.600    0.196    ?          0.600    ?          ?        0.769     0.492     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+  7  0  0  0  0  0 |  a = WOOD
+  0  0  5  0  0  0 |  b = SUSPEN
+  0  0 11  0  0  1 |  c = SIMPLE-T
+  0  0  5  0  0  0 |  d = ARCH
+  0  0  3  0  0  0 |  e = CANTILEV
+  0  0  0  0  0  3 |  f = CONT-T
+

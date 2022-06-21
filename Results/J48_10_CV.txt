@@ -1,0 +1,132 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     bridges-version1-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    107
+Attributes:   13
+              IDENTIF
+              RIVER
+              LOCATION
+              ERECTED
+              PURPOSE
+              LENGTH
+              LANES
+              CLEAR-G
+              T-OR-D
+              MATERIAL
+              SPAN
+              REL-L
+              TYPE
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+MATERIAL = WOOD: WOOD (16.0)
+MATERIAL = IRON
+|   REL-L = S: SUSPEN (3.0/1.0)
+|   REL-L = S-F: SUSPEN (1.0)
+|   REL-L = F: SIMPLE-T (7.0)
+MATERIAL = STEEL
+|   PURPOSE = WALK: SUSPEN (1.0)
+|   PURPOSE = AQUEDUCT: SIMPLE-T (0.0)
+|   PURPOSE = RR: SIMPLE-T (26.0/3.0)
+|   PURPOSE = HIGHWAY
+|   |   LOCATION = 1: SUSPEN (3.0/2.0)
+|   |   LOCATION = 10: SIMPLE-T (0.0)
+|   |   LOCATION = 11: CONT-T (1.0)
+|   |   LOCATION = 12: SIMPLE-T (0.0)
+|   |   LOCATION = 13: SIMPLE-T (0.0)
+|   |   LOCATION = 14: CONT-T (1.0)
+|   |   LOCATION = 15: SIMPLE-T (0.0)
+|   |   LOCATION = 16: SIMPLE-T (0.0)
+|   |   LOCATION = 17: SIMPLE-T (1.0)
+|   |   LOCATION = 18: SIMPLE-T (0.0)
+|   |   LOCATION = 19: CANTILEV (1.0)
+|   |   LOCATION = 2: SIMPLE-T (0.0)
+|   |   LOCATION = 20: CANTILEV (1.0)
+|   |   LOCATION = 21: SIMPLE-T (0.0)
+|   |   LOCATION = 22: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 23: SIMPLE-T (2.0)
+|   |   LOCATION = 24: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 25: SUSPEN (2.0/1.0)
+|   |   LOCATION = 26: SUSPEN (2.0)
+|   |   LOCATION = 27: SUSPEN (2.0/1.0)
+|   |   LOCATION = 28: SIMPLE-T (1.0)
+|   |   LOCATION = 29: ARCH (1.0)
+|   |   LOCATION = 3: ARCH (1.0)
+|   |   LOCATION = 30: ARCH (1.0)
+|   |   LOCATION = 31: SIMPLE-T (0.0)
+|   |   LOCATION = 32: ARCH (1.0)
+|   |   LOCATION = 33: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 34: CANTILEV (2.0)
+|   |   LOCATION = 35: SIMPLE-T (0.0)
+|   |   LOCATION = 36: SIMPLE-T (1.0)
+|   |   LOCATION = 37: CONT-T (1.0)
+|   |   LOCATION = 38: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 38.5: CONT-T (1.0)
+|   |   LOCATION = 39: SIMPLE-T (0.0)
+|   |   LOCATION = 39.5: CONT-T (1.0)
+|   |   LOCATION = 39.7: SIMPLE-T (0.0)
+|   |   LOCATION = 4: SIMPLE-T (0.0)
+|   |   LOCATION = 40: ARCH (1.0)
+|   |   LOCATION = 41: SIMPLE-T (0.0)
+|   |   LOCATION = 42: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 43: CANTILEV (1.0)
+|   |   LOCATION = 44: ARCH (1.0)
+|   |   LOCATION = 45: SIMPLE-T (0.0)
+|   |   LOCATION = 46: CANTILEV (1.0)
+|   |   LOCATION = 47: CONT-T (1.0)
+|   |   LOCATION = 48: SUSPEN (2.0/1.0)
+|   |   LOCATION = 49: SIMPLE-T (0.0)
+|   |   LOCATION = 5: CANTILEV (1.0)
+|   |   LOCATION = 51: SIMPLE-T (0.0)
+|   |   LOCATION = 52: ARCH (1.0)
+|   |   LOCATION = 6: SUSPEN (1.0)
+|   |   LOCATION = 7: ARCH (2.0)
+|   |   LOCATION = 8: SIMPLE-T (0.0)
+|   |   LOCATION = 9: SIMPLE-T (2.0/1.0)
+
+Number of Leaves  : 	61
+
+Size of the tree : 	65
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          55               52.381  %
+Incorrectly Classified Instances        50               47.619  %
+Kappa statistic                          0.3199
+Mean absolute error                      0.1739
+Root mean squared error                  0.3341
+Relative absolute error                 68.6043 %
+Root relative squared error             94.0974 %
+Total Number of Instances              105     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     WOOD
+                 0.000    0.053    0.000      0.000    0.000      -0.076   0.706     0.205     SUSPEN
+                 0.750    0.475    0.532      0.750    0.623      0.276    0.702     0.578     SIMPLE-T
+                 0.308    0.120    0.267      0.308    0.286      0.177    0.641     0.251     ARCH
+                 0.000    0.011    0.000      0.000    0.000      -0.034   0.590     0.123     CANTILEV
+                 0.200    0.042    0.333      0.200    0.250      0.200    0.701     0.205     CONT-T
+Weighted Avg.    0.524    0.225    0.440      0.524    0.472      0.297    0.728     0.480     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 16  0  0  0  0  0 |  a = WOOD
+  0  0  7  3  1  0 |  b = SUSPEN
+  0  3 33  6  0  2 |  c = SIMPLE-T
+  0  1  7  4  0  1 |  d = ARCH
+  0  1  8  1  0  1 |  e = CANTILEV
+  0  0  7  1  0  2 |  f = CONT-T
+

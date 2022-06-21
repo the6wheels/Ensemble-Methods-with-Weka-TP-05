@@ -1,0 +1,168 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     bridges-version1-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    107
+Attributes:   13
+              IDENTIF
+              RIVER
+              LOCATION
+              ERECTED
+              PURPOSE
+              LENGTH
+              LANES
+              CLEAR-G
+              T-OR-D
+              MATERIAL
+              SPAN
+              REL-L
+              TYPE
+Test mode:    107-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SimpleLogistic:
+
+Class WOOD :
+-28.61 + 
+[MATERIAL=WOOD] * 59.35
+
+Class SUSPEN :
+-2.42 + 
+[IDENTIF=E16] * 2.29 +
+[IDENTIF=E23] * 3.62 +
+[IDENTIF=E44] * 5.21 +
+[IDENTIF=E65] * 4.61 +
+[IDENTIF=E70] * 3.58 +
+[IDENTIF=E71] * 2.63 +
+[IDENTIF=E76] * 4.74 +
+[LOCATION=25] * 1.84 +
+[LOCATION=26] * 7.55 +
+[ERECTED='(-inf-1854.5]'] * 7    +
+[ERECTED='(1854.5-1877]'] * 2.02 +
+[ERECTED='(1903.5-1916.5]'] * -0.96 +
+[PURPOSE=RR] * -0.91 +
+[LANES='(1.5-2.315217]'] * -0.67 +
+[T-OR-D=DECK] * -0.95
+
+Class SIMPLE-T :
+-0.59 + 
+[IDENTIF=E16] * -1.26 +
+[IDENTIF=E33] * 0.92 +
+[IDENTIF=E52] * -0.9 +
+[IDENTIF=E55] * 2.49 +
+[IDENTIF=E57] * -2.54 +
+[IDENTIF=E60] * 3.7  +
+[IDENTIF=E82] * 1.07 +
+[LOCATION=1] * -0.87 +
+[LOCATION=17] * 2.13 +
+[LOCATION=23] * 1.02 +
+[LOCATION=48] * -2.18 +
+[LOCATION=7] * -0.98 +
+[ERECTED='(1889.5-1896.5]'] * 1.06 +
+[ERECTED='(1896.5-1903.5]'] * 0.68 +
+[ERECTED='(1916.5-1927.5]'] * -2.58 +
+[PURPOSE=RR] * 2.66 +
+[LENGTH='(1015-1180.5]'] * -0.47 +
+[LENGTH='(1180.5-1357.5]'] * 0.81 +
+[LENGTH='(1357.5-1537.734568]'] * -2.21 +
+[LENGTH='(2216.5-2543]'] * 0.67 +
+[LANES='(3.315217-5]'] * -2 +
+[T-OR-D=DECK] * -1.73 +
+[SPAN=MEDIUM] * 1.03 +
+[SPAN=LONG] * -0.72 +
+[REL-L=F] * 1.07
+
+Class ARCH :
+-4 + 
+[IDENTIF=E28] * 4.76 +
+[IDENTIF=E43] * 2.58 +
+[IDENTIF=E64] * 3.01 +
+[IDENTIF=E75] * 3.58 +
+[IDENTIF=E77] * 2.61 +
+[IDENTIF=E78] * 2.59 +
+[IDENTIF=E97] * 2.56 +
+[RIVER=M] * -1.31 +
+[LOCATION=7] * 4.71 +
+[ERECTED='(1903.5-1916.5]'] * -1 +
+[PURPOSE=HIGHWAY] * 1.99 +
+[LENGTH='(1180.5-1357.5]'] * -0.91 +
+[LENGTH='(1357.5-1537.734568]'] * 0.69 +
+[LANES='(1.5-2.315217]'] * -1.6 +
+[LANES='(5-inf)'] * 6.2  +
+[MATERIAL=STEEL] * 0.94 +
+[REL-L=S] * 2.98 +
+[REL-L=S-F] * -1.9
+
+Class CANTILEV :
+-2.66 + 
+[IDENTIF=E103] * 3.68 +
+[IDENTIF=E52] * 6.04 +
+[IDENTIF=E57] * 2.59 +
+[IDENTIF=E59] * 2.5  +
+[IDENTIF=E67] * 2.44 +
+[IDENTIF=E72] * 2.59 +
+[IDENTIF=E74] * 6.26 +
+[IDENTIF=E80] * 3.81 +
+[RIVER=A] * -1.89 +
+[LOCATION=34] * 9.96 +
+[ERECTED='(1889.5-1896.5]'] * -0.97 +
+[ERECTED='(1916.5-1927.5]'] * 1.34 +
+[ERECTED='(1942-1953]'] * 0.75 +
+[LENGTH='(1537.734568-1593.734568]'] * -0.96 +
+[LENGTH='(1593.734568-1825]'] * 2.5  +
+[SPAN=LONG] * 0.58
+
+Class CONT-T :
+-5.94 + 
+[IDENTIF=E102] * 6.39 +
+[IDENTIF=E62] * 2.67 +
+[IDENTIF=E74] * -1.05 +
+[IDENTIF=E93] * 0.98 +
+[IDENTIF=E98] * 8.02 +
+[ERECTED='(1942-1953]'] * 2.58 +
+[ERECTED='(1953-inf)'] * 3.57 +
+[LENGTH='(1593.734568-1825]'] * 1.93 +
+[LENGTH='(2543-inf)'] * -5.35 +
+[LANES='(3.315217-5]'] * 0.92 +
+[CLEAR-G=G] * -0.9 +
+[T-OR-D=DECK] * 6.62 +
+[SPAN=LONG] * 0.79
+
+
+Time taken to build model: 0.34 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          70               66.6667 %
+Incorrectly Classified Instances        35               33.3333 %
+Kappa statistic                          0.5344
+Mean absolute error                      0.1187
+Root mean squared error                  0.2901
+Relative absolute error                 46.4745 %
+Root relative squared error             81.0366 %
+Total Number of Instances              105     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     WOOD
+                 0.091    0.011    0.500      0.091    0.154      0.180    0.712     0.222     SUSPEN
+                 0.886    0.295    0.684      0.886    0.772      0.586    0.866     0.810     SIMPLE-T
+                 0.538    0.065    0.538      0.538    0.538      0.473    0.889     0.646     ARCH
+                 0.091    0.064    0.143      0.091    0.111      0.033    0.600     0.180     CANTILEV
+                 0.600    0.042    0.600      0.600    0.600      0.558    0.948     0.680     CONT-T
+Weighted Avg.    0.667    0.144    0.630      0.667    0.628      0.532    0.853     0.679     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 16  0  0  0  0  0 |  a = WOOD
+  0  1  8  2  0  0 |  b = SUSPEN
+  0  1 39  3  1  0 |  c = SIMPLE-T
+  0  0  4  7  2  0 |  d = ARCH
+  0  0  5  1  1  4 |  e = CANTILEV
+  0  0  1  0  3  6 |  f = CONT-T
+

@@ -1,0 +1,629 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Vote -S 1 -B "weka.classifiers.bayes.NaiveBayes " -B "weka.classifiers.lazy.IBk -K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"" -B "weka.classifiers.rules.OneR -B 6" -B "weka.classifiers.rules.PART -C 0.25 -M 2" -B "weka.classifiers.trees.J48 -C 0.25 -M 2" -B "weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0" -R MAJ
+Relation:     bridges-version1-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    107
+Attributes:   13
+              IDENTIF
+              RIVER
+              LOCATION
+              ERECTED
+              PURPOSE
+              LENGTH
+              LANES
+              CLEAR-G
+              T-OR-D
+              MATERIAL
+              SPAN
+              REL-L
+              TYPE
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Vote combines the probability distributions of these base learners:
+	weka.classifiers.bayes.NaiveBayes 
+	weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+	weka.classifiers.rules.OneR -B 6
+	weka.classifiers.rules.PART -C 0.25 -M 2
+	weka.classifiers.trees.J48 -C 0.25 -M 2
+	weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+using the 'Majority Voting' combination rule 
+
+All the models:
+
+Naive Bayes Classifier
+
+                                   Class
+Attribute                           WOOD   SUSPEN SIMPLE-T     ARCH CANTILEV   CONT-T
+                                  (0.15)   (0.11)   (0.41)   (0.13)   (0.11)    (0.1)
+======================================================================================
+IDENTIF
+  E1                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E10                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E100                                1.0      1.0      1.0      1.0      1.0      1.0
+  E101                                1.0      1.0      1.0      1.0      2.0      1.0
+  E102                                1.0      1.0      1.0      1.0      1.0      2.0
+  E103                                1.0      1.0      1.0      1.0      2.0      1.0
+  E105                                1.0      1.0      1.0      1.0      1.0      2.0
+  E107                                1.0      1.0      1.0      1.0      1.0      1.0
+  E107N                               1.0      1.0      2.0      1.0      1.0      1.0
+  E108                                1.0      1.0      1.0      1.0      1.0      2.0
+  E109                                1.0      1.0      1.0      1.0      1.0      1.0
+  E11                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E12                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E13                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E14                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E15                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E16                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E17                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E18                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E19                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E2                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E20                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E21                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E22                                 2.0      1.0      1.0      1.0      1.0      1.0
+  E23                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E24                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E25                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E26                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E27                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E28                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E29                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E3                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E30                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E31                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E32                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E33                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E34                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E35                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E36                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E37                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E38                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E39                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E4                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E40                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E41                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E42                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E43                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E44                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E45                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E46                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E47                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E48                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E49                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E5                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E50                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E51                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E52                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E53                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E54                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E55                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E56                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E57                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E58                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E59                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E6                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E60                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E61                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E62                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E63                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E64                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E65                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E66                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E67                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E68                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E69                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E7                                  2.0      1.0      1.0      1.0      1.0      1.0
+  E70                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E71                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E72                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E73                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E74                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E75                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E76                                 1.0      2.0      1.0      1.0      1.0      1.0
+  E77                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E78                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E79                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E8                                  1.0      2.0      1.0      1.0      1.0      1.0
+  E80                                 1.0      1.0      1.0      1.0      2.0      1.0
+  E81                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E82                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E83                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E84                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E85                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E86                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E87                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E88                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E89                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E9                                  1.0      2.0      1.0      1.0      1.0      1.0
+  E90                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E91                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E92                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E93                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E94                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E95                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E96                                 1.0      1.0      2.0      1.0      1.0      1.0
+  E97                                 1.0      1.0      1.0      2.0      1.0      1.0
+  E98                                 1.0      1.0      1.0      1.0      1.0      2.0
+  E99                                 1.0      1.0      2.0      1.0      1.0      1.0
+  [total]                           124.0    119.0    152.0    121.0    119.0    118.0
+
+RIVER
+  A                                  14.0      8.0     16.0      6.0      3.0      6.0
+  M                                   4.0      4.0     23.0      5.0      6.0      5.0
+  O                                   1.0      2.0      6.0      4.0      5.0      2.0
+  Y                                   1.0      1.0      3.0      2.0      1.0      1.0
+  [total]                            20.0     15.0     48.0     17.0     15.0     14.0
+
+LOCATION
+  1                                   1.0      2.0      1.0      2.0      2.0      1.0
+  10                                  1.0      1.0      3.0      1.0      1.0      1.0
+  11                                  1.0      1.0      2.0      1.0      1.0      2.0
+  12                                  1.0      1.0      2.0      1.0      1.0      1.0
+  13                                  1.0      1.0      2.0      1.0      1.0      1.0
+  14                                  1.0      1.0      2.0      1.0      1.0      2.0
+  15                                  1.0      1.0      2.0      1.0      1.0      1.0
+  16                                  1.0      1.0      3.0      1.0      1.0      1.0
+  17                                  1.0      1.0      3.0      1.0      1.0      1.0
+  18                                  1.0      1.0      2.0      1.0      1.0      1.0
+  19                                  1.0      1.0      2.0      1.0      2.0      1.0
+  2                                   1.0      1.0      1.0      1.0      2.0      1.0
+  20                                  1.0      1.0      1.0      1.0      2.0      1.0
+  21                                  1.0      1.0      2.0      1.0      1.0      1.0
+  22                                  1.0      1.0      2.0      1.0      1.0      2.0
+  23                                  2.0      1.0      3.0      1.0      1.0      1.0
+  24                                  2.0      1.0      2.0      2.0      1.0      1.0
+  25                                  2.0      3.0      2.0      1.0      1.0      1.0
+  26                                  1.0      3.0      1.0      1.0      1.0      1.0
+  27                                  3.0      2.0      2.0      1.0      1.0      1.0
+  28                                  2.0      2.0      4.0      1.0      1.0      1.0
+  29                                  4.0      1.0      1.0      2.0      1.0      1.0
+  3                                   2.0      2.0      1.0      2.0      1.0      1.0
+  30                                  1.0      2.0      2.0      2.0      1.0      1.0
+  31                                  1.0      1.0      3.0      1.0      1.0      1.0
+  32                                  2.0      1.0      1.0      2.0      1.0      1.0
+  33                                  2.0      1.0      2.0      1.0      1.0      2.0
+  34                                  1.0      1.0      1.0      1.0      3.0      1.0
+  35                                  1.0      1.0      2.0      1.0      1.0      1.0
+  36                                  1.0      1.0      2.0      1.0      1.0      1.0
+  37                                  1.0      1.0      2.0      1.0      1.0      3.0
+  38                                  1.0      1.0      2.0      2.0      1.0      1.0
+  38.5                                1.0      1.0      1.0      1.0      1.0      2.0
+  39                                  4.0      1.0      2.0      1.0      1.0      1.0
+  39.5                                1.0      1.0      1.0      1.0      1.0      2.0
+  39.7                                1.0      1.0      2.0      1.0      1.0      1.0
+  4                                   1.0      1.0      3.0      1.0      1.0      1.0
+  40                                  1.0      1.0      1.0      2.0      1.0      1.0
+  41                                  1.0      1.0      3.0      1.0      1.0      1.0
+  42                                  1.0      1.0      2.0      2.0      1.0      1.0
+  43                                  1.0      1.0      1.0      1.0      2.0      1.0
+  44                                  1.0      1.0      1.0      2.0      1.0      1.0
+  45                                  1.0      1.0      3.0      1.0      1.0      1.0
+  46                                  1.0      1.0      1.0      1.0      2.0      1.0
+  47                                  1.0      1.0      1.0      1.0      1.0      2.0
+  48                                  1.0      2.0      1.0      1.0      2.0      1.0
+  49                                  1.0      1.0      1.0      1.0      2.0      1.0
+  5                                   1.0      1.0      1.0      1.0      2.0      1.0
+  51                                  1.0      1.0      2.0      1.0      1.0      1.0
+  52                                  1.0      1.0      1.0      2.0      1.0      1.0
+  6                                   2.0      2.0      2.0      1.0      1.0      1.0
+  7                                   1.0      1.0      1.0      3.0      1.0      1.0
+  8                                   1.0      1.0      2.0      1.0      1.0      1.0
+  9                                   1.0      1.0      2.0      1.0      1.0      2.0
+  [total]                            70.0     65.0     98.0     67.0     65.0     64.0
+
+ERECTED
+  '(-inf-1854.5]'                    10.0      3.0      1.0      1.0      1.0      1.0
+  '(1854.5-1877]'                     7.0      3.0      4.0      1.0      1.0      1.0
+  '(1877-1889.5]'                     1.0      2.0     10.0      2.0      1.0      1.0
+  '(1889.5-1896.5]'                   2.0      2.0      9.0      2.0      1.0      1.0
+  '(1896.5-1903.5]'                   1.0      1.0     11.0      1.0      2.0      1.0
+  '(1903.5-1916.5]'                   1.0      1.0      9.0      1.0      4.0      1.0
+  '(1916.5-1927.5]'                   1.0      4.0      2.0      4.0      4.0      2.0
+  '(1927.5-1942]'                     1.0      3.0      2.0      4.0      3.0      2.0
+  '(1942-1953]'                       1.0      1.0      4.0      2.0      3.0      5.0
+  '(1953-inf)'                        1.0      1.0      2.0      5.0      1.0      5.0
+  [total]                            26.0     21.0     54.0     23.0     21.0     20.0
+
+PURPOSE
+  WALK                                1.0      2.0      1.0      1.0      1.0      1.0
+  AQUEDUCT                            4.0      2.0      1.0      1.0      1.0      1.0
+  RR                                  3.0      1.0     27.0      1.0      3.0      2.0
+  HIGHWAY                            12.0     10.0     19.0     14.0     10.0     10.0
+  [total]                            20.0     15.0     48.0     17.0     15.0     14.0
+
+LENGTH
+  '(-inf-985]'                        1.0      4.0      4.0      4.0      1.0      3.0
+  '(985-1015]'                        6.0      2.0      4.0      3.0      1.0      1.0
+  '(1015-1180.5]'                     3.0      3.0      5.0      2.0      2.0      2.0
+  '(1180.5-1357.5]'                   3.0      2.0      8.0      1.0      2.0      1.0
+  '(1357.5-1537.734568]'              1.0      3.0      2.0      4.0      2.0      1.0
+  '(1537.734568-1593.734568]'         8.0      3.0     15.0      2.0      1.0      1.0
+  '(1593.734568-1825]'                1.0      1.0      2.0      1.0      5.0      4.0
+  '(1825-2216.5]'                     1.0      1.0      5.0      1.0      3.0      2.0
+  '(2216.5-2543]'                     1.0      1.0      4.0      2.0      2.0      4.0
+  '(2543-inf)'                        1.0      1.0      5.0      3.0      2.0      1.0
+  [total]                            26.0     21.0     54.0     23.0     21.0     20.0
+
+LANES
+  '(-inf-1.5]'                        4.0      2.0      1.0      1.0      1.0      1.0
+  '(1.5-2.315217]'                   13.0      5.0     35.0      3.0      7.0      4.0
+  '(2.315217-3.315217]'               1.0      3.0      9.0      3.0      2.0      1.0
+  '(3.315217-5]'                      2.0      5.0      3.0      6.0      5.0      8.0
+  '(5-inf)'                           1.0      1.0      1.0      5.0      1.0      1.0
+  [total]                            21.0     16.0     49.0     18.0     16.0     15.0
+
+CLEAR-G
+  N                                  16.0      4.0      3.0      2.0      2.0      5.0
+  G                                   2.0      9.0     43.0     13.0     11.0      7.0
+  [total]                            18.0     13.0     46.0     15.0     13.0     12.0
+
+T-OR-D
+  THROUGH                            15.0     12.0     44.0     13.0      9.0      3.0
+  DECK                                3.0      1.0      2.0      2.0      4.0      9.0
+  [total]                            18.0     13.0     46.0     15.0     13.0     12.0
+
+MATERIAL
+  WOOD                               17.0      1.0      1.0      1.0      1.0      1.0
+  IRON                                1.0      4.0      9.0      1.0      1.0      1.0
+  STEEL                               1.0      9.0     37.0     14.0     12.0     11.0
+  [total]                            19.0     14.0     47.0     16.0     14.0     13.0
+
+SPAN
+  SHORT                               6.0      3.0      3.0      1.0      1.0      1.0
+  MEDIUM                             12.0      7.0     35.0      8.0      5.0      5.0
+  LONG                                1.0      4.0      9.0      7.0      8.0      7.0
+  [total]                            19.0     14.0     47.0     16.0     14.0     13.0
+
+REL-L
+  S                                  17.0      3.0      9.0      5.0      1.0      1.0
+  S-F                                 1.0      5.0      5.0      1.0      4.0      5.0
+  F                                   1.0      6.0     33.0     10.0      9.0      7.0
+  [total]                            19.0     14.0     47.0     16.0     14.0     13.0
+
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+IDENTIF:
+	E1	-> WOOD
+	E10	-> WOOD
+	E100	-> WOOD
+	E101	-> CANTILEV
+	E102	-> CONT-T
+	E103	-> CANTILEV
+	E105	-> CONT-T
+	E107	-> WOOD
+	E107N	-> SIMPLE-T
+	E108	-> CONT-T
+	E109	-> WOOD
+	E11	-> WOOD
+	E12	-> WOOD
+	E13	-> WOOD
+	E14	-> WOOD
+	E15	-> WOOD
+	E16	-> SUSPEN
+	E17	-> SIMPLE-T
+	E18	-> SIMPLE-T
+	E19	-> WOOD
+	E2	-> WOOD
+	E20	-> WOOD
+	E21	-> SIMPLE-T
+	E22	-> WOOD
+	E23	-> SUSPEN
+	E24	-> SIMPLE-T
+	E25	-> SIMPLE-T
+	E26	-> SIMPLE-T
+	E27	-> SIMPLE-T
+	E28	-> ARCH
+	E29	-> SUSPEN
+	E3	-> WOOD
+	E30	-> SIMPLE-T
+	E31	-> SIMPLE-T
+	E32	-> SIMPLE-T
+	E33	-> SIMPLE-T
+	E34	-> SIMPLE-T
+	E35	-> SIMPLE-T
+	E36	-> SIMPLE-T
+	E37	-> SIMPLE-T
+	E38	-> SIMPLE-T
+	E39	-> SIMPLE-T
+	E4	-> WOOD
+	E40	-> SIMPLE-T
+	E41	-> SIMPLE-T
+	E42	-> SIMPLE-T
+	E43	-> ARCH
+	E44	-> SUSPEN
+	E45	-> SIMPLE-T
+	E46	-> SIMPLE-T
+	E47	-> SIMPLE-T
+	E48	-> SIMPLE-T
+	E49	-> CANTILEV
+	E5	-> WOOD
+	E50	-> SIMPLE-T
+	E51	-> SIMPLE-T
+	E52	-> CANTILEV
+	E53	-> SIMPLE-T
+	E54	-> SIMPLE-T
+	E55	-> SIMPLE-T
+	E56	-> SIMPLE-T
+	E57	-> CANTILEV
+	E58	-> SIMPLE-T
+	E59	-> CANTILEV
+	E6	-> WOOD
+	E60	-> SIMPLE-T
+	E61	-> SIMPLE-T
+	E62	-> CONT-T
+	E63	-> SIMPLE-T
+	E64	-> ARCH
+	E65	-> SUSPEN
+	E66	-> ARCH
+	E67	-> CANTILEV
+	E68	-> SIMPLE-T
+	E69	-> SUSPEN
+	E7	-> WOOD
+	E70	-> SUSPEN
+	E71	-> SUSPEN
+	E72	-> CANTILEV
+	E73	-> ARCH
+	E74	-> CANTILEV
+	E75	-> ARCH
+	E76	-> SUSPEN
+	E77	-> ARCH
+	E78	-> ARCH
+	E79	-> CANTILEV
+	E8	-> SUSPEN
+	E80	-> CANTILEV
+	E81	-> CONT-T
+	E82	-> SIMPLE-T
+	E83	-> ARCH
+	E84	-> ARCH
+	E85	-> CONT-T
+	E86	-> CONT-T
+	E87	-> SIMPLE-T
+	E88	-> CONT-T
+	E89	-> SIMPLE-T
+	E9	-> SUSPEN
+	E90	-> ARCH
+	E91	-> ARCH
+	E92	-> SIMPLE-T
+	E93	-> CONT-T
+	E94	-> SIMPLE-T
+	E95	-> SIMPLE-T
+	E96	-> SIMPLE-T
+	E97	-> ARCH
+	E98	-> CONT-T
+	E99	-> SIMPLE-T
+(105/105 instances correct)
+
+PART decision list
+------------------
+
+MATERIAL = WOOD: WOOD (16.0)
+
+: SIMPLE-T (89.0/45.0)
+
+Number of Rules  : 	2
+
+J48 pruned tree
+------------------
+
+MATERIAL = WOOD: WOOD (16.0)
+MATERIAL = IRON
+|   REL-L = S: SUSPEN (3.0/1.0)
+|   REL-L = S-F: SUSPEN (1.0)
+|   REL-L = F: SIMPLE-T (7.0)
+MATERIAL = STEEL
+|   PURPOSE = WALK: SUSPEN (1.0)
+|   PURPOSE = AQUEDUCT: SIMPLE-T (0.0)
+|   PURPOSE = RR: SIMPLE-T (26.0/3.0)
+|   PURPOSE = HIGHWAY
+|   |   LOCATION = 1: SUSPEN (3.0/2.0)
+|   |   LOCATION = 10: SIMPLE-T (0.0)
+|   |   LOCATION = 11: CONT-T (1.0)
+|   |   LOCATION = 12: SIMPLE-T (0.0)
+|   |   LOCATION = 13: SIMPLE-T (0.0)
+|   |   LOCATION = 14: CONT-T (1.0)
+|   |   LOCATION = 15: SIMPLE-T (0.0)
+|   |   LOCATION = 16: SIMPLE-T (0.0)
+|   |   LOCATION = 17: SIMPLE-T (1.0)
+|   |   LOCATION = 18: SIMPLE-T (0.0)
+|   |   LOCATION = 19: CANTILEV (1.0)
+|   |   LOCATION = 2: SIMPLE-T (0.0)
+|   |   LOCATION = 20: CANTILEV (1.0)
+|   |   LOCATION = 21: SIMPLE-T (0.0)
+|   |   LOCATION = 22: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 23: SIMPLE-T (2.0)
+|   |   LOCATION = 24: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 25: SUSPEN (2.0/1.0)
+|   |   LOCATION = 26: SUSPEN (2.0)
+|   |   LOCATION = 27: SUSPEN (2.0/1.0)
+|   |   LOCATION = 28: SIMPLE-T (1.0)
+|   |   LOCATION = 29: ARCH (1.0)
+|   |   LOCATION = 3: ARCH (1.0)
+|   |   LOCATION = 30: ARCH (1.0)
+|   |   LOCATION = 31: SIMPLE-T (0.0)
+|   |   LOCATION = 32: ARCH (1.0)
+|   |   LOCATION = 33: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 34: CANTILEV (2.0)
+|   |   LOCATION = 35: SIMPLE-T (0.0)
+|   |   LOCATION = 36: SIMPLE-T (1.0)
+|   |   LOCATION = 37: CONT-T (1.0)
+|   |   LOCATION = 38: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 38.5: CONT-T (1.0)
+|   |   LOCATION = 39: SIMPLE-T (0.0)
+|   |   LOCATION = 39.5: CONT-T (1.0)
+|   |   LOCATION = 39.7: SIMPLE-T (0.0)
+|   |   LOCATION = 4: SIMPLE-T (0.0)
+|   |   LOCATION = 40: ARCH (1.0)
+|   |   LOCATION = 41: SIMPLE-T (0.0)
+|   |   LOCATION = 42: SIMPLE-T (2.0/1.0)
+|   |   LOCATION = 43: CANTILEV (1.0)
+|   |   LOCATION = 44: ARCH (1.0)
+|   |   LOCATION = 45: SIMPLE-T (0.0)
+|   |   LOCATION = 46: CANTILEV (1.0)
+|   |   LOCATION = 47: CONT-T (1.0)
+|   |   LOCATION = 48: SUSPEN (2.0/1.0)
+|   |   LOCATION = 49: SIMPLE-T (0.0)
+|   |   LOCATION = 5: CANTILEV (1.0)
+|   |   LOCATION = 51: SIMPLE-T (0.0)
+|   |   LOCATION = 52: ARCH (1.0)
+|   |   LOCATION = 6: SUSPEN (1.0)
+|   |   LOCATION = 7: ARCH (2.0)
+|   |   LOCATION = 8: SIMPLE-T (0.0)
+|   |   LOCATION = 9: SIMPLE-T (2.0/1.0)
+
+Number of Leaves  : 	61
+
+Size of the tree : 	65
+
+SimpleLogistic:
+
+Class WOOD :
+-28.61 + 
+[MATERIAL=WOOD] * 59.35
+
+Class SUSPEN :
+-2.42 + 
+[IDENTIF=E16] * 2.29 +
+[IDENTIF=E23] * 3.62 +
+[IDENTIF=E44] * 5.21 +
+[IDENTIF=E65] * 4.61 +
+[IDENTIF=E70] * 3.58 +
+[IDENTIF=E71] * 2.63 +
+[IDENTIF=E76] * 4.74 +
+[LOCATION=25] * 1.84 +
+[LOCATION=26] * 7.55 +
+[ERECTED='(-inf-1854.5]'] * 7    +
+[ERECTED='(1854.5-1877]'] * 2.02 +
+[ERECTED='(1903.5-1916.5]'] * -0.96 +
+[PURPOSE=RR] * -0.91 +
+[LANES='(1.5-2.315217]'] * -0.67 +
+[T-OR-D=DECK] * -0.95
+
+Class SIMPLE-T :
+-0.59 + 
+[IDENTIF=E16] * -1.26 +
+[IDENTIF=E33] * 0.92 +
+[IDENTIF=E52] * -0.9 +
+[IDENTIF=E55] * 2.49 +
+[IDENTIF=E57] * -2.54 +
+[IDENTIF=E60] * 3.7  +
+[IDENTIF=E82] * 1.07 +
+[LOCATION=1] * -0.87 +
+[LOCATION=17] * 2.13 +
+[LOCATION=23] * 1.02 +
+[LOCATION=48] * -2.18 +
+[LOCATION=7] * -0.98 +
+[ERECTED='(1889.5-1896.5]'] * 1.06 +
+[ERECTED='(1896.5-1903.5]'] * 0.68 +
+[ERECTED='(1916.5-1927.5]'] * -2.58 +
+[PURPOSE=RR] * 2.66 +
+[LENGTH='(1015-1180.5]'] * -0.47 +
+[LENGTH='(1180.5-1357.5]'] * 0.81 +
+[LENGTH='(1357.5-1537.734568]'] * -2.21 +
+[LENGTH='(2216.5-2543]'] * 0.67 +
+[LANES='(3.315217-5]'] * -2 +
+[T-OR-D=DECK] * -1.73 +
+[SPAN=MEDIUM] * 1.03 +
+[SPAN=LONG] * -0.72 +
+[REL-L=F] * 1.07
+
+Class ARCH :
+-4 + 
+[IDENTIF=E28] * 4.76 +
+[IDENTIF=E43] * 2.58 +
+[IDENTIF=E64] * 3.01 +
+[IDENTIF=E75] * 3.58 +
+[IDENTIF=E77] * 2.61 +
+[IDENTIF=E78] * 2.59 +
+[IDENTIF=E97] * 2.56 +
+[RIVER=M] * -1.31 +
+[LOCATION=7] * 4.71 +
+[ERECTED='(1903.5-1916.5]'] * -1 +
+[PURPOSE=HIGHWAY] * 1.99 +
+[LENGTH='(1180.5-1357.5]'] * -0.91 +
+[LENGTH='(1357.5-1537.734568]'] * 0.69 +
+[LANES='(1.5-2.315217]'] * -1.6 +
+[LANES='(5-inf)'] * 6.2  +
+[MATERIAL=STEEL] * 0.94 +
+[REL-L=S] * 2.98 +
+[REL-L=S-F] * -1.9
+
+Class CANTILEV :
+-2.66 + 
+[IDENTIF=E103] * 3.68 +
+[IDENTIF=E52] * 6.04 +
+[IDENTIF=E57] * 2.59 +
+[IDENTIF=E59] * 2.5  +
+[IDENTIF=E67] * 2.44 +
+[IDENTIF=E72] * 2.59 +
+[IDENTIF=E74] * 6.26 +
+[IDENTIF=E80] * 3.81 +
+[RIVER=A] * -1.89 +
+[LOCATION=34] * 9.96 +
+[ERECTED='(1889.5-1896.5]'] * -0.97 +
+[ERECTED='(1916.5-1927.5]'] * 1.34 +
+[ERECTED='(1942-1953]'] * 0.75 +
+[LENGTH='(1537.734568-1593.734568]'] * -0.96 +
+[LENGTH='(1593.734568-1825]'] * 2.5  +
+[SPAN=LONG] * 0.58
+
+Class CONT-T :
+-5.94 + 
+[IDENTIF=E102] * 6.39 +
+[IDENTIF=E62] * 2.67 +
+[IDENTIF=E74] * -1.05 +
+[IDENTIF=E93] * 0.98 +
+[IDENTIF=E98] * 8.02 +
+[ERECTED='(1942-1953]'] * 2.58 +
+[ERECTED='(1953-inf)'] * 3.57 +
+[LENGTH='(1593.734568-1825]'] * 1.93 +
+[LENGTH='(2543-inf)'] * -5.35 +
+[LANES='(3.315217-5]'] * 0.92 +
+[CLEAR-G=G] * -0.9 +
+[T-OR-D=DECK] * 6.62 +
+[SPAN=LONG] * 0.79
+
+
+
+Time taken to build model: 0.33 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          22               62.8571 %
+Incorrectly Classified Instances        13               37.1429 %
+Kappa statistic                          0.4899
+Mean absolute error                      0.1238
+Root mean squared error                  0.3519
+Relative absolute error                 47.8914 %
+Root relative squared error             96.0871 %
+Total Number of Instances               35     
+Ignored Class Unknown Instances                  1     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     WOOD
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.139     SUSPEN
+                 0.917    0.478    0.500      0.917    0.647      0.431    0.708     0.466     SIMPLE-T
+                 0.000    0.033    0.000      0.000    0.000      -0.070   0.484     0.139     ARCH
+                 0.333    0.000    1.000      0.333    0.500      0.560    0.667     0.389     CANTILEV
+                 1.000    0.031    0.750      1.000    0.857      0.852    0.985     0.750     CONT-T
+Weighted Avg.    0.629    0.171    ?          0.629    ?          ?        0.725     0.497     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+  7  0  0  0  0  0 |  a = WOOD
+  0  0  4  1  0  0 |  b = SUSPEN
+  0  0 11  0  0  1 |  c = SIMPLE-T
+  0  0  5  0  0  0 |  d = ARCH
+  0  0  2  0  1  0 |  e = CANTILEV
+  0  0  0  0  0  3 |  f = CONT-T
+
